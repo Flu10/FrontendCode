@@ -1,0 +1,10 @@
+
+<select ng-model="myColor"  ng-options="color1.text  for color1 in colors" ng-change="changeColor()">
+</select>
+<span ng-class="myColor.class" > Some text</span>
+<input ng-model="oricenume" type="text" >
+<ul>
+    <li  ng-repeat="color in colors | filter:oricenume ">
+       {{color.text}}
+    </li>
+</ul>
